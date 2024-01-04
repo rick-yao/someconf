@@ -6,10 +6,10 @@ File="$3";
 MaxSize="15728640";
 Thread="3";  #默认3线程，自行修改，服务器配置不好的话，不建议太多
 Block="20";  #默认分块20m，自行修改
-RemoteDIR="";  #上传到Onedrive的路径，默认为根目录，如果要上传到MOERATS目录，""里面请填成MOERATS
-LocalDIR="/www/download/";  #Aria2下载目录，记得最后面加上/
-Uploader="/usr/local/bin/OneDriveUploader";  #上传的程序完整路径，默认为本文安装的目录
-Config="/root/auth.json";  #初始化生成的配置auth.json绝对路径，参考第3步骤生成的路径
+RemoteDIR="vps";  #上传到Onedrive的路径，默认为根目录，如果要上传到MOERATS目录，""里面请填成MOERATS
+LocalDIR="/downloads/";  #Aria2下载目录，记得最后面加上/
+Uploader="/config/OneDriveUploader";  #上传的程序完整路径，默认为本文安装的目录
+Config="/config/auth.json";  #初始化生成的配置auth.json绝对路径，参考第3步骤生成的路径
 
 
 if [[ -z $(echo "$FileNum" |grep -o '[0-9]*' |head -n1) ]]; then FileNum='0'; fi
